@@ -827,7 +827,7 @@
 
             <dependency>
                 <groupId>org.jmock</groupId>
-                <artifactId>jmock-legacy</artifactId>
+                <artifactId>jmock-imposters</artifactId>
                 <version>${version.org.jmock.jmock-legacy}</version>
             </dependency>
 

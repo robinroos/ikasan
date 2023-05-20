@@ -43,7 +43,7 @@ package org.ikasan.cli.shell.reporting;
 import org.ikasan.cli.shell.operation.model.ProcessType;
 import org.jmock.Expectations;
 import org.jmock.Mockery;
-import org.jmock.lib.legacy.ClassImposteriser;
+import org.jmock.imposters.ByteBuddyClassImposteriser;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.junit.Assert;
@@ -64,7 +64,7 @@ class ProcessInfoTest
     private Mockery mockery = new Mockery()
     {
         {
-            setImposteriser(ClassImposteriser.INSTANCE);
+            setImposteriser(ByteBuddyClassImposteriser.INSTANCE);
         }
     };
 

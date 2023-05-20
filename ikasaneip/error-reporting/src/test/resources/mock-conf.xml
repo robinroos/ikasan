@@ -8,7 +8,7 @@
     <bean id="mockery" class="org.jmock.Mockery" >
         <property name="imposteriser" >
             <bean class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean">
-                <property name="staticField" value="org.jmock.lib.legacy.ClassImposteriser.INSTANCE"/>
+                <property name="staticField" value="org.jmock.imposters.ByteBuddyClassImposteriser.INSTANCE"/>
             </bean>
         </property>
     </bean>

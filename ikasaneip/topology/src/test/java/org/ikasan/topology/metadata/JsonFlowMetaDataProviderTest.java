@@ -17,7 +17,7 @@ import org.ikasan.topology.metadata.flow.TestFlowElement;
 import org.ikasan.trigger.model.TriggerImpl;
 import org.jmock.Expectations;
 import org.jmock.Mockery;
-import org.jmock.lib.legacy.ClassImposteriser;
+import org.jmock.imposters.ByteBuddyClassImposteriser;
 import org.json.JSONException;
 import org.junit.Assert;
 import org.junit.Before;

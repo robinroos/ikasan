@@ -63,7 +63,7 @@ import org.ikasan.connector.util.chunking.model.dao.FileChunkDao;
 import org.jmock.Expectations;
 import org.jmock.Mockery;
 import org.jmock.Sequence;
-import org.jmock.lib.legacy.ClassImposteriser;
+import org.jmock.imposters.ByteBuddyClassImposteriser;
 
 import org.junit.Test;
 
@@ -94,7 +94,7 @@ public class ChunkingRetrieveFileCommandTest
         Mockery context = new Mockery()
         {
             {
-                setImposteriser(ClassImposteriser.INSTANCE);
+                setImposteriser(ByteBuddyClassImposteriser.INSTANCE);
             }
         };
         Mockery interfaceMockery = new Mockery();

@@ -10,7 +10,7 @@ import org.ikasan.spec.configuration.ConfigurationService;
 import org.ikasan.spec.error.reporting.ErrorReportingService;
 import org.jmock.Expectations;
 import org.jmock.Mockery;
-import org.jmock.lib.legacy.ClassImposteriser;
+import org.jmock.imposters.ByteBuddyClassImposteriser;
 import org.joda.time.format.DateTimeFormatter;
 import org.junit.Before;
 import org.junit.Rule;
@@ -48,7 +48,7 @@ public class DailyEventRuleTest
     {
         {
             //setThreadingPolicy(new Synchroniser());
-            setImposteriser(ClassImposteriser.INSTANCE);
+            setImposteriser(ByteBuddyClassImposteriser.INSTANCE);
         }
     };
 

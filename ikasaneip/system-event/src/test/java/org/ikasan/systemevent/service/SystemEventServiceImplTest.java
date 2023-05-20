@@ -6,7 +6,7 @@ import org.ikasan.spec.systemevent.SystemEventService;
 import org.ikasan.systemevent.model.SystemEventImpl;
 import org.jmock.Expectations;
 import org.jmock.Mockery;
-import org.jmock.lib.legacy.ClassImposteriser;
+import org.jmock.imposters.ByteBuddyClassImposteriser;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -36,7 +36,7 @@ public class SystemEventServiceImplTest
 
     private Mockery mockery = new Mockery()
     {{
-        setImposteriser(ClassImposteriser.INSTANCE);
+        setImposteriser(ByteBuddyClassImposteriser.INSTANCE);
     }};
 
     private SystemEventDao systemEventDao = mockery.mock(SystemEventDao.class, "mockSystemEventDao");

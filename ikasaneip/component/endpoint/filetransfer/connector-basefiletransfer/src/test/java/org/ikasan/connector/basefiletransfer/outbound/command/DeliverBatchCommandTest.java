@@ -68,7 +68,7 @@ import org.ikasan.connector.basefiletransfer.outbound.command.util.FileHandle;
 import org.ikasan.connector.basefiletransfer.outbound.command.util.UniqueIdGenerator;
 import org.jmock.Expectations;
 import org.jmock.Mockery;
-import org.jmock.lib.legacy.ClassImposteriser;
+import org.jmock.imposters.ByteBuddyClassImposteriser;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -181,7 +181,7 @@ public class DeliverBatchCommandTest
         Mockery classMockery = new Mockery()
         {
             {
-                setImposteriser(ClassImposteriser.INSTANCE);
+                setImposteriser(ByteBuddyClassImposteriser.INSTANCE);
             }
         };
         final FileTransferClient client = classMockery.mock(FileTransferClient.class);
@@ -259,7 +259,7 @@ public class DeliverBatchCommandTest
         Mockery classMockery = new Mockery()
         {
             {
-                setImposteriser(ClassImposteriser.INSTANCE);
+                setImposteriser(ByteBuddyClassImposteriser.INSTANCE);
             }
         };
         final FileTransferClient client = classMockery.mock(FileTransferClient.class);
@@ -363,7 +363,7 @@ public class DeliverBatchCommandTest
         Mockery classMockery = new Mockery()
         {
             {
-                setImposteriser(ClassImposteriser.INSTANCE);
+                setImposteriser(ByteBuddyClassImposteriser.INSTANCE);
             }
         };
         final FileTransferClient client = classMockery.mock(FileTransferClient.class);

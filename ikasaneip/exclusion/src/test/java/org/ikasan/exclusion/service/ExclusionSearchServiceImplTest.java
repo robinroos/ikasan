@@ -50,7 +50,7 @@ import org.ikasan.spec.flow.FlowInvocationContext;
 import org.ikasan.spec.serialiser.SerialiserFactory;
 import org.jmock.Expectations;
 import org.jmock.Mockery;
-import org.jmock.lib.legacy.ClassImposteriser;
+import org.jmock.imposters.ByteBuddyClassImposteriser;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -76,7 +76,7 @@ public class ExclusionSearchServiceImplTest
      */
     private Mockery mockery = new Mockery()
     {{
-        setImposteriser(ClassImposteriser.INSTANCE);
+        setImposteriser(ByteBuddyClassImposteriser.INSTANCE);
     }};
 
     ExclusionEventDao<String,ExclusionEvent> exclusionServiceExclusionEventDao = mockery.mock(ExclusionEventDao.class,"mockDao");

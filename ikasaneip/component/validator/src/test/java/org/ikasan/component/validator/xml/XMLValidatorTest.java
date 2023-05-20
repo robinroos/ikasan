@@ -5,7 +5,7 @@ import org.ikasan.component.validator.ValidationResult;
 import org.jmock.Expectations;
 import org.jmock.Mockery;
 import org.jmock.States;
-import org.jmock.lib.legacy.ClassImposteriser;
+import org.jmock.imposters.ByteBuddyClassImposteriser;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Ignore;
@@ -57,7 +57,7 @@ public class XMLValidatorTest
     private Mockery classMockery = new Mockery()
     {
         {
-            setImposteriser(ClassImposteriser.INSTANCE);
+            setImposteriser(ByteBuddyClassImposteriser.INSTANCE);
         }
     };
     //    States test = classMockery.states("test");

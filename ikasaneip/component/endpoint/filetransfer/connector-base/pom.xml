@@ -151,13 +151,14 @@
 			<artifactId>jmock</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<!-- CGLib, used for testing assitance to jmock -->
-		<dependency>
-			<groupId>cglib</groupId>
-			<artifactId>cglib-nodep</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<!-- Objenesis, used for testing assitance to jmock -->
+
+        <dependency>
+            <groupId>org.jmock</groupId>
+            <artifactId>jmock-imposters</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Objenesis, used for testing assitance to jmock -->
 		<dependency>
 			<groupId>org.objenesis</groupId>
 			<artifactId>objenesis</artifactId>
